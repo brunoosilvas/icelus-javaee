@@ -14,7 +14,7 @@ import br.com.icelus.javaee.service.UserService;
 @Named
 @ViewScoped
 public class UserBean implements Serializable {
-
+   
    private static final long serialVersionUID = 1L;
 
    @Inject

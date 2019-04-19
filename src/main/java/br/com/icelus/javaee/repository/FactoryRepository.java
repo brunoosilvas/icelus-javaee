@@ -13,14 +13,14 @@ import br.com.icelus.javaee.cdi.Repository;
 @Dependent
 public class FactoryRepository {
 
-	@Inject @Database
-	private EntityManager entityManager;
-	
-	@Produces @Repository
-	public UserRepository getUsuariosRepository() {
-		JpaRepositoryFactory factory = new JpaRepositoryFactory(entityManager);
-		return factory.getRepository(UserRepository.class);
-	}
-	
-	
+   @Inject @Database
+   private EntityManager entityManager;
+
+   @Produces @Repository
+   public UserRepository getUsuariosRepository() {
+      JpaRepositoryFactory factory = new JpaRepositoryFactory(entityManager);
+      return factory.getRepository(UserRepository.class);
+   }
+
+
 }

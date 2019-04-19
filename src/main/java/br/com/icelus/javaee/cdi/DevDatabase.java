@@ -12,6 +12,4 @@ import javax.enterprise.inject.Stereotype;
 @Stereotype
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface DevDatabase {
-
-}
+public @interface DevDatabase { }

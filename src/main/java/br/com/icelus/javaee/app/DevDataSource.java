@@ -12,7 +12,7 @@ import br.com.icelus.javaee.cdi.DevDatabase;
 
 @DevDatabase
 public class DevDataSource {
-
+   
    @Inject
    private DatabaseBean database;
 

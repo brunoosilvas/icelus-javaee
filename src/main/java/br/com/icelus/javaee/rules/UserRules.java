@@ -14,18 +14,18 @@ import br.com.icelus.javaee.util.Mapper;
 
 @Dependent
 public class UserRules {
-	
-	@Inject @Repository
-	private UserRepository userRepository;
 
-	public List<UserDto> listAll() throws SQLException {
-		
-		List<UserDto> userDtoList = null;
-		
-		List<User> userList = userRepository.findAll();
-		
-		userDtoList = Mapper.mapAll(userList, UserDto.class);
-		
-		return userDtoList;
-	}
+   @Inject @Repository
+   private UserRepository userRepository;
+
+   public List<UserDto> listAll() throws SQLException {
+
+      List<UserDto> userDtoList = null;
+
+      List<User> userList = userRepository.findAll();
+
+      userDtoList = Mapper.mapAll(userList, UserDto.class);
+
+      return userDtoList;
+   }
 }

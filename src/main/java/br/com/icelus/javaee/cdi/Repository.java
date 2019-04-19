@@ -10,6 +10,4 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @Qualifier
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Repository {
-
-}
+public @interface Repository { }

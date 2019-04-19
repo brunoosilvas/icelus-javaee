@@ -2,6 +2,7 @@ package br.com.icelus.javaee.entity;
 // Generated 19/04/2019 12:53:18 by Hibernate Tools 5.2.12.Final
 
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,66 +17,63 @@ import javax.persistence.TemporalType;
 @Table(name = "user")
 public class User implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private Long id;
-	private String username;
-	private String password;
-	private Date expiration;
+   private static final long serialVersionUID = 1L;
+   private Long id;
+   private String username;
+   private String password;
+   private Date expiration;
 
-	public User() {
-	}
+   public User() {
+   }
 
-	public User(Long id) {
-		this.id = id;
-	}
+   public User(Long id) {
+      this.id = id;
+   }
 
-	public User(Long id, String username, String password, Date expiration) {
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.expiration = expiration;
-	}
+   public User(Long id, String username, String password, Date expiration) {
+      this.id = id;
+      this.username = username;
+      this.password = password;
+      this.expiration = expiration;
+   }
 
-	@Id
+   @Id
 
-	@Column(name = "id", unique = true, nullable = false)
-	public Long getId() {
-		return this.id;
-	}
+   @Column(name = "id", unique = true, nullable = false)
+   public Long getId() {
+      return this.id;
+   }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+   public void setId(Long id) {
+      this.id = id;
+   }
 
-	@Column(name = "username", length = 50)
-	public String getUsername() {
-		return this.username;
-	}
+   @Column(name = "username", length = 50)
+   public String getUsername() {
+      return this.username;
+   }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+   public void setUsername(String username) {
+      this.username = username;
+   }
 
-	@Column(name = "password", length = 50)
-	public String getPassword() {
-		return this.password;
-	}
+   @Column(name = "password", length = 50)
+   public String getPassword() {
+      return this.password;
+   }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+   public void setPassword(String password) {
+      this.password = password;
+   }
 
-	@Temporal(TemporalType.TIME)
-	@Column(name = "expiration", length = 15)
-	public Date getExpiration() {
-		return this.expiration;
-	}
+   @Temporal(TemporalType.TIME)
+   @Column(name = "expiration", length = 15)
+   public Date getExpiration() {
+      return this.expiration;
+   }
 
-	public void setExpiration(Date expiration) {
-		this.expiration = expiration;
-	}
+   public void setExpiration(Date expiration) {
+      this.expiration = expiration;
+   }
 
 }

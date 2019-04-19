@@ -5,49 +5,46 @@ import java.util.Date;
 
 public class UserDto implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private Long id;
-	private String username;
-	private String password;
-	private Date expiration;
-	
-	public UserDto() {
-		
-	}
+   private static final long serialVersionUID = 1L;
+   private Long id;
+   private String username;
+   private String password;
+   private Date expiration;
 
-	public Long getId() {
-		return id;
-	}
+   public UserDto() {
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+   }
 
-	public String getUsername() {
-		return username;
-	}
+   public Long getId() {
+      return id;
+   }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+   public void setId(Long id) {
+      this.id = id;
+   }
 
-	public String getPassword() {
-		return password;
-	}
+   public String getUsername() {
+      return username;
+   }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+   public void setUsername(String username) {
+      this.username = username;
+   }
 
-	public Date getExpiration() {
-		return expiration;
-	}
+   public String getPassword() {
+      return password;
+   }
 
-	public void setExpiration(Date expiration) {
-		this.expiration = expiration;
-	}
-	
+   public void setPassword(String password) {
+      this.password = password;
+   }
+
+   public Date getExpiration() {
+      return expiration;
+   }
+
+   public void setExpiration(Date expiration) {
+      this.expiration = expiration;
+   }
+
 }
