@@ -14,32 +14,32 @@ import br.com.icelus.javaee.service.UserService;
 @Named
 @ViewScoped
 public class UserBean implements Serializable {
-   
-   private static final long serialVersionUID = 1L;
 
-   @Inject
-   private UserService userService;
+    private static final long serialVersionUID = 1L;
 
-   private List<UserDto> userList;
+    @Inject
+    private UserService userService;
 
-   public void search() {
+    private List<UserDto> userList;
 
-      try {
+    public void search() {
 
-         userList = userService.listAll();
+        try {
 
-      } catch (Exception e) {
-         e.printStackTrace();
-      }
+            userList = userService.listAll();
 
-   }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-   public List<UserDto> getUserList() {
-      return userList;
-   }
+    }
 
-   public void setUserList(List<UserDto> userList) {
-      this.userList = userList;
-   }
+    public List<UserDto> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<UserDto> userList) {
+        this.userList = userList;
+    }
 
 }

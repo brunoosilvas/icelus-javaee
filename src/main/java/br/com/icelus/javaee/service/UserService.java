@@ -12,12 +12,12 @@ import br.com.icelus.javaee.rules.UserRules;
 @RequestScoped
 public class UserService {
 
-   @Inject 
-   private UserRules userRules;
+    @Inject 
+    private UserRules userRules;
 
-   @Transactional
-   public List<UserDto> listAll() throws Exception {
-      return userRules.listAll();
-   }
+    @Transactional
+    public List<UserDto> listAll() throws Exception {
+        return userRules.listAll();
+    }
 
 }

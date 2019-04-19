@@ -12,29 +12,29 @@ import br.com.icelus.javaee.cdi.DevDatabase;
 
 @DevDatabase
 public class DevDataSource {
-   
-   @Inject
-   private DatabaseBean database;
 
-   @PersistenceContext(unitName = "dev-mysql")
-   private EntityManager entityManagerMysql;
+    @Inject
+    private DatabaseBean database;
 
-   @PersistenceContext(unitName = "dev-postgresql")
-   private EntityManager entityManagerPostgresql;
+    @PersistenceContext(unitName = "dev-mysql")
+    private EntityManager entityManagerMysql;
 
-   @Produces @Database @RequestScoped
-   public EntityManager createEntityManager() {
-      EntityManager entityManager = null;
+    @PersistenceContext(unitName = "dev-postgresql")
+    private EntityManager entityManagerPostgresql;
 
-      if (database.getChoise() == null) {
-         entityManager = entityManagerMysql;
-      } else if (database.getChoise().equals("mysql")) {
-         entityManager = entityManagerMysql;
-      } else if (database.getChoise().equals("postgresql")) {
-         entityManager = entityManagerPostgresql;
-      }
+    @Produces @Database @RequestScoped
+    public EntityManager createEntityManager() {
+        EntityManager entityManager = null;
 
-      return entityManager;
-   }
+        if (database.getChoise() == null) {
+            entityManager = entityManagerMysql;
+        } else if (database.getChoise().equals("mysql")) {
+            entityManager = entityManagerMysql;
+        } else if (database.getChoise().equals("postgresql")) {
+            entityManager = entityManagerPostgresql;
+        }
+
+        return entityManager;
+    }
 
 }

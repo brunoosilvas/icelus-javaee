@@ -10,31 +10,31 @@ import javax.inject.Named;
 @SessionScoped
 public class DatabaseBean implements Serializable {
 
-   private static final long serialVersionUID = 1L;
-   private String choise;
-   private String[] choiseList;
+    private static final long serialVersionUID = 1L;
+    private String choise;
+    private String[] choiseList;
 
-   @PostConstruct
-   public void initialize() {
-      choiseList = new String[] {
-            "mysql", "postgresql"	
-      };
-   }
+    @PostConstruct
+    public void initialize() {
+        choiseList = new String[] {
+                "mysql", "postgresql"	
+        };
+    }
 
-   public String getChoise() {
-      return choise;
-   }
+    public String getChoise() {
+        return choise;
+    }
 
-   public void setChoise(String choise) {
-      this.choise = choise;
-   }
+    public void setChoise(String choise) {
+        this.choise = choise;
+    }
 
-   public String[] getChoiseList() {
-      return choiseList;
-   }
+    public String[] getChoiseList() {
+        return choiseList;
+    }
 
-   public void setChoiseList(String[] choiseList) {
-      this.choiseList = choiseList;
-   }
+    public void setChoiseList(String[] choiseList) {
+        this.choiseList = choiseList;
+    }
 
 }
