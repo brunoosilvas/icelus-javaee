@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import javax.enterprise.context.Dependent;
+import javax.inject.Inject;
 
 import br.com.icelus.javaee.cdi.Repository;
 import br.com.icelus.javaee.dto.UserDto;
@@ -14,7 +15,7 @@ import br.com.icelus.javaee.util.Mapper;
 @Dependent
 public class UserRules {
 	
-	@Repository
+	@Inject @Repository
 	private UserRepository userRepository;
 
 	public List<UserDto> listAll() throws SQLException {

@@ -10,7 +10,11 @@
     	<jta-data-source>java:jboss/datasource/mysql/examples</jta-data-source>
     	
     	<properties>
-    		<property name="wildfly.jpa.default-unit" value="true" />    		
+    		<property name="wildfly.jpa.default-unit" value="true" /> 
+    		<property name="hibernate.default_schema" value="examples" />
+    		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+	        <property name="hibernate.show_sql" value="true" />
+	        <property name="hibernate.format_sql" value="true" />   		
     	</properties>
         
     </persistence-unit>
@@ -22,6 +26,10 @@
     	
     	<properties>    	
     		<property name="wildfly.jpa.default-unit" value="false" />
+    		<property name="hibernate.default_schema" value="public" />
+    		<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+	        <property name="hibernate.show_sql" value="true" />
+	        <property name="hibernate.format_sql" value="true" />
     	</properties>
         
     </persistence-unit>

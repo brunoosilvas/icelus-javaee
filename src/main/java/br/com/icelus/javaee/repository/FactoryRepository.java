@@ -2,6 +2,7 @@ package br.com.icelus.javaee.repository;
 
 import javax.enterprise.context.Dependent;
 import javax.enterprise.inject.Produces;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
@@ -12,7 +13,7 @@ import br.com.icelus.javaee.cdi.Repository;
 @Dependent
 public class FactoryRepository {
 
-	@Database
+	@Inject @Database
 	private EntityManager entityManager;
 	
 	@Produces @Repository
