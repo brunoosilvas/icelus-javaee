@@ -7,22 +7,31 @@
 	<h:form id="main-form">
 	
 		<p:outputPanel id="main-panel">
-		
-			<p:selectOneMenu value="#{databaseBean.choise}">
-				
-				<p:ajax event="change" update="@this" />
-				
-				<f:selectItem itemValue="#{null}" itemLabel="Select..." />
-				<f:selectItems var="database" value="#{databaseBean.choiseList}" 
-					itemValue="#{database}" itemLabel="#{database}" />
-					
-			</p:selectOneMenu>
 			
-			<p:commandButton value="Search..." actionListener="#{userBean.search()}" 
-				update=":main-form:main-panel" />
+			
+			<div class="ui-g">
+				<div class="ui-g-4">
+					<p:selectOneMenu value="#{databaseBean.choise}">
+						
+						<p:ajax event="change" update="@this" />
+						
+						<f:selectItem itemValue="#{null}" itemLabel="Select..." />
+						<f:selectItems var="database" value="#{databaseBean.choiseList}" 
+							itemValue="#{database}" itemLabel="Select database: #{database}" />
+							
+					</p:selectOneMenu>
+				</div>
+				<div class="ui-g-4">
+					<p:commandButton value="Search..." actionListener="#{userBean.search()}" 
+						update=":main-form:main-panel" style="width: auto;" />
+				</div>
+			</div>
+			
 			
 			<div class="ui-g">
 				<div class="ui-g-12">
+					
+					<h3>List of users</h3>
 					
 					<ul>
 						<ui:repeat var="user" value="#{userBean.userList}">
