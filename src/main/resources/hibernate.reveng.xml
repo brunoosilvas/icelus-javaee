@@ -2,5 +2,13 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-name="user" />
+
+<type-mapping>
+
+	<sql-type jdbc-type="BIGINT" hibernate-type="Long"
+		not-null="true">
+	</sql-type>
+</type-mapping>
+
+<table-filter match-name="user" />
 </hibernate-reverse-engineering>
