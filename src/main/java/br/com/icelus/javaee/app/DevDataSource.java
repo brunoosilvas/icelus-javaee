@@ -16,10 +16,10 @@ public class DevDataSource {
 	@Inject
 	private DatabaseBean database;
 	
-	@PersistenceContext(name = "dev-mysql")
+	@PersistenceContext(unitName = "dev-mysql")
 	private EntityManager entityManagerMysql;
 	
-	@PersistenceContext(name = "dev-postgresql")
+	@PersistenceContext(unitName = "dev-postgresql")
 	private EntityManager entityManagerPostgresql;
 	
 	@Produces @Database @RequestScoped
