@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'master' of https://github.com/brunoosilvas/icelus-javaee.git
     <Resource name="BeanManager" auth="Container"
         type="javax.enterprise.inject.spi.BeanManager"
         factory="org.jboss.weld.resources.ManagerObjectFactory" />
