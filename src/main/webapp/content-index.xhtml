@@ -1,52 +1,57 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui">
-	
-	<h:form id="main-form">
-	
-		<p:outputPanel id="main-panel">
-			
-			
-			<div class="ui-g">
-				<div class="ui-g-4">
-					<p:selectOneMenu value="#{databaseBean.choise}">
-						
-						<p:ajax event="change" update="@this" />
-						
-						<f:selectItem itemValue="#{null}" itemLabel="Select..." />
-						<f:selectItems var="database" value="#{databaseBean.choiseList}" 
-							itemValue="#{database}" itemLabel="Select database: #{database}" />
-							
-					</p:selectOneMenu>
-				</div>
-				<div class="ui-g-4">
-					<p:commandButton value="Search..." actionListener="#{userBean.search()}" 
-						update=":main-form:main-panel" style="width: auto;" />
-				</div>
-			</div>
-			
-			
-			<div class="ui-g">
-				<div class="ui-g-12">
-					
-					<h3>List of users</h3>
-					
-					<ul>
-						<ui:repeat var="user" value="#{userBean.userList}">
-							<li>#{user.username}</li>
-						</ui:repeat>
-					</ul>
-					
-				</div>
-			</div>
-		
-		</p:outputPanel>
-	
-	</h:form>
-	
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:form id="main-form">
+
+        <p:outputPanel id="main-panel">
+
+
+            <div class="ui-g">
+                <div class="ui-g-4">
+                    <p:selectOneMenu value="#{databaseBean.choise}">
+
+                        <p:ajax event="change" update="@this" />
+
+                        <f:selectItem itemValue="#{null}"
+                            itemLabel="Select..." />
+                        <f:selectItems var="database"
+                            value="#{databaseBean.choiseList}"
+                            itemValue="#{database}"
+                            itemLabel="Select database: #{database}" />
+
+                    </p:selectOneMenu>
+                </div>
+                <div class="ui-g-4">
+                    <p:commandButton value="Search..."
+                        actionListener="#{userBean.search()}"
+                        update=":main-form:main-panel"
+                        style="width: auto;" />
+                </div>
+            </div>
+
+
+            <div class="ui-g">
+                <div class="ui-g-12">
+
+                    <h3>List of users</h3>
+
+                    <ul>
+                        <ui:repeat var="user"
+                            value="#{userBean.userList}">
+                            <li>#{user.username}</li>
+                        </ui:repeat>
+                    </ul>
+
+                </div>
+            </div>
+
+        </p:outputPanel>
+
+    </h:form>
+
 </ui:composition>
-	
-	
-	
+
+
