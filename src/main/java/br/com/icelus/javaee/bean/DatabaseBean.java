@@ -19,7 +19,7 @@ public class DatabaseBean implements Serializable {
 	
 	@PostConstruct
 	public void initialize() {
-		choiseList = new String[] {
+	   choiseList = new String[] {
 			"mysql", "postgresql"	
 		};
 	}

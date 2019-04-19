@@ -24,7 +24,7 @@ public class DevDataSource {
 
 	@Produces @Database @RequestScoped
 	public EntityManager createEntityManager() {
-		EntityManager entityManager = null;
+	   EntityManager entityManager = null;
 
 		if (database.getChoise() == null) {
 			entityManager = entityManagerMysql;
