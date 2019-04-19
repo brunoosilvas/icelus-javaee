@@ -1,0 +1,1 @@
+package br.com.icelus.javaee.cdi;
