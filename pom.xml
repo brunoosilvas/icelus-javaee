@@ -7,8 +7,6 @@
     <artifactId>icelus-javaee</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-<<<<<<< HEAD
-=======
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -61,64 +59,7 @@
             <version>42.2.5</version>
             <scope>provided</scope>
         </dependency>
->>>>>>> branch 'master' of https://github.com/brunoosilvas/icelus-javaee.git
-
-<<<<<<< HEAD
-
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
-    <dependencies>
-
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>8.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>2.1.6.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>2.3.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>7.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>omnifaces</artifactId>
-            <version>3.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.15</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.5</version>
-            <scope>provided</scope>
-        </dependency>
-
-=======
->>>>>>> branch 'master' of https://github.com/brunoosilvas/icelus-javaee.git
+        
     </dependencies>
 
 </project>
